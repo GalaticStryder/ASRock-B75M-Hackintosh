@@ -1,0 +1,25 @@
+Arquitetura:           x86_64
+Modo(s) operacional da CPU:32-bit, 64-bit
+Ordem dos bytes:       Little Endian
+CPU(s):                4
+Lista de CPU(s) on-line:0-3
+Thread(s) per núcleo  1
+Núcleo(s) por soquete:4
+Soquete(s):            1
+Nó(s) de NUMA:        1
+ID de fornecedor:      GenuineIntel
+Família da CPU:       6
+Modelo:                42
+Nome do modelo:        Intel(R) Core(TM) i5-2310 CPU @ 2.90GHz
+Step:                  7
+CPU MHz:               1609.273
+CPU MHz máx.:         3200,0000
+CPU MHz mín.:         1600,0000
+BogoMIPS:              5789.93
+Virtualização:       VT-x
+cache de L1d:          32K
+cache de L1i:          32K
+cache de L2:           256K
+cache de L3:           6144K
+CPU(s) de nó0 NUMA:   0-3
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt tsc_deadline_timer aes xsave avx lahf_lm ida arat epb pln pts dtherm tpr_shadow vnmi flexpriority ept vpid xsaveopt

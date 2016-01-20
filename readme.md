@@ -34,7 +34,7 @@ Extract ACPI files from GNU/Linux:
 
 	cd acpi
 	mkdir original
-	sudo cp -R /sys/firmware/acpi/tables original
+	sudo cp -R /sys/firmware/acpi/tables/* original/
 	sudo chmod -R ugo+rw original
 	sudo chown -R galatic original
 

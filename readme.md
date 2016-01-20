@@ -23,8 +23,8 @@ Instructions:
 
 Clone this repository somewhere.
 
-		git clone https://github.com/GalaticStryder/ASRock-B75M-Hackintosh
-		cd ASRock-B75M-Hackintosh
+	git clone https://github.com/GalaticStryder/ASRock-B75M-Hackintosh
+	cd ASRock-B75M-Hackintosh
 	./clean.sh
 
 **_A_)**

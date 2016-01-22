@@ -85,28 +85,50 @@
 			<key>Generate</key>
 			<dict>
 				<key>CStates</key>
-				<false/>
+				<true/>
 				<key>PStates</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
+		<key>SortedOrder</key>
+		<array>
+			<string>SSDT.aml</string>
+			<string>SSDT-0.aml</string>
+			<string>SSDT-1.aml</string>
+			<string>SSDT-2.aml</string>
+			<string>SSDT-3.aml</string>
+			<string>SSDT-4.aml</string>
+			<string>SSDT-5.aml</string>
+			<string>SSDT-6.aml</string>
+			<string>SSDT-7.aml</string>
+			<string>SSDT-8.aml</string>
+			<string>SSDT-9.aml</string>
+			<string>SSDT-10.aml</string>
+			<string>SSDT-11.aml</string>
+			<string>SSDT-12.aml</string>
+			<string>SSDT-13.aml</string>
+			<string>SSDT-14.aml</string>
+			<string>SSDT-15.aml</string>
+			<string>SSDT-16.aml</string>
+			<string>SSDT-17.aml</string>
+			<string>SSDT-18.aml</string>
+			<string>SSDT-19.aml</string>
+		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1</string>
+		<string>npci=0x2000 dart=0 kext-dev-mode=1 -v</string>
 		<key>DefaultVolume</key>
-		<string>MacHDD</string>
-		<key>Legacy</key>
-		<string>PBR</string>
+		<string>Macintosh HD</string>
 		<key>Log</key>
 		<true/>
 		<key>Secure</key>
-		<false/>
+		<true/>
 		<key>Timeout</key>
-		<integer>10</integer>
+		<integer>3</integer>
 		<key>XMPDetection</key>
-		<string>NO</string>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -136,45 +158,49 @@
 		</dict>
 		<key>USB</key>
 		<dict>
+			<key>AddClockID</key>
+			<true/>
 			<key>FixOwnership</key>
-			<false/>
+			<true/>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
-		<key>UseIntelHDMI</key>
-		<false/>
 	</dict>
 	<key>DisableDrivers</key>
 	<array>
-		<string>Nothing</string>
+		<string>VBoxHfs</string>
 	</array>
 	<key>GUI</key>
 	<dict>
-		<key>Hide</key>
-		<array>
-			<string>Windows</string>
-			<string>\EFI\BOOT\BOOTX64.EFI</string>
-		</array>
-		<key>Language</key>
-		<string>en:0</string>
+		<key>#ScreenResolution</key>
+		<string>1366x768</string>
+		<key>Custom</key>
+		<dict>
+			<key>Entries</key>
+			<array>
+				<dict>
+					<key>FullTitle</key>
+					<string>UEFI internal</string>
+					<key>Hidden</key>
+					<string>Always</string>
+					<key>Type</key>
+					<string>Other</string>
+				</dict>
+			</array>
+		</dict>
 		<key>Mouse</key>
 		<dict>
+			<key>DoubleClick</key>
+			<integer>500</integer>
 			<key>Enabled</key>
-			<true/>
+			<false/>
+			<key>Mirror</key>
+			<false/>
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
-		<key>Scan</key>
-		<dict>
-			<key>Entries</key>
-			<true/>
-			<key>Legacy</key>
-			<string>First</string>
-			<key>Tool</key>
-			<true/>
-		</dict>
 		<key>Theme</key>
-		<string></string>
+		<string>Bluemac</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -183,9 +209,9 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
-			<key>NVidia</key>
 			<false/>
+			<key>NVidia</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -194,39 +220,79 @@
 		<true/>
 		<key>AsusAICPUPM</key>
 		<true/>
+		<key>ForceKextsToLoad</key>
+		<array>
+			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
+		</array>
 		<key>KernelPm</key>
 		<true/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>External icons patch</string>
+				<string>Boot graphics glitch, 10.10.2/10.10.3</string>
+				<key>Disabled</key>
+				<true/>
 				<key>Find</key>
-				<data>
-				RXh0ZXJuYWw=
-				</data>
+				<data>QYjE6xE=</data>
 				<key>Name</key>
-				<string>AppleAHCIPort</string>
+				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
-				<data>
-				SW50ZXJuYWw=
-				</data>
+				<data>QYjE6zE=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AQAAdRc=</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>AQAA6xc=</data>
 			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>LogEveryBoot</key>
-		<string>10</string>
-		<key>LogLineCount</key>
-		<integer>3000</integer>
-		<key>MountEFI</key>
-		<string>Yes</string>
+		<key>BooterConfig</key>
+		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>09/04/2012</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>IM131.88Z.010A.B05.1209042338</string>
+		<key>Board-ID</key>
+		<string>Mac-00BE6ED71E35EB86</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>ChassisAssetTag</key>
+		<string>iMac-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>13</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
+		<false/>
+		<key>ProductName</key>
+		<string>iMac13,1</string>
 		<key>Trust</key>
 		<false/>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>

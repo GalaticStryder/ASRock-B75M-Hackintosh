@@ -10,85 +10,17 @@
 			<false/>
 			<key>DropOEM_DSM</key>
 			<false/>
-			<key>Fixes</key>
-			<dict>
-				<key>AddDTGP_0001</key>
-				<false/>
-				<key>AddHDMI_8000000</key>
-				<false/>
-				<key>AddIMEI_80000</key>
-				<false/>
-				<key>AddMCHC_0008</key>
-				<false/>
-				<key>AddPNLF_1000000</key>
-				<false/>
-				<key>DeleteUnused_400000</key>
-				<false/>
-				<key>FIX_ACST_4000000</key>
-				<false/>
-				<key>FIX_ADP1_800000</key>
-				<false/>
-				<key>FIX_INTELGFX_100000</key>
-				<false/>
-				<key>FIX_RTC_20000</key>
-				<false/>
-				<key>FIX_S3D_2000000</key>
-				<false/>
-				<key>FakeLPC_0020</key>
-				<false/>
-				<key>FiX_TMR_40000</key>
-				<false/>
-				<key>FiX_WAK_200000</key>
-				<false/>
-				<key>FixAirport_4000</key>
-				<false/>
-				<key>FixDarwin_0002</key>
-				<false/>
-				<key>FixDisplay_0100</key>
-				<false/>
-				<key>FixFirewire_0800</key>
-				<false/>
-				<key>FixHDA_8000</key>
-				<false/>
-				<key>FixHPET_0010</key>
-				<false/>
-				<key>FixIDE_0200</key>
-				<false/>
-				<key>FixIPIC_0040</key>
-				<false/>
-				<key>FixLAN_2000</key>
-				<false/>
-				<key>FixRegions_10000000</key>
-				<false/>
-				<key>FixSATA_0400</key>
-				<false/>
-				<key>FixSBUS_0080</key>
-				<false/>
-				<key>FixShutdown_0004</key>
-				<false/>
-				<key>FixUSB_1000</key>
-				<false/>
-				<key>NewWay_80000000</key>
-				<false/>
-			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-		<key>HaltEnabler</key>
-		<false/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
 			<false/>
 			<key>Generate</key>
-			<dict>
-				<key>CStates</key>
-				<true/>
-				<key>PStates</key>
-				<true/>
-			</dict>
+			<true/>
 		</dict>
 		<key>SortedOrder</key>
 		<array>
@@ -118,11 +50,11 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>npci=0x2000 dart=0 kext-dev-mode=1 -v</string>
+		<string>dart=0 npci=0x2000 nvda_drv=1 kext-dev-mode=1 GraphicsEnabler=1</string>
+		<key>Debug</key>
+		<false/>
 		<key>DefaultVolume</key>
 		<string>Macintosh HD</string>
-		<key>Log</key>
-		<true/>
 		<key>Secure</key>
 		<true/>
 		<key>Timeout</key>
@@ -172,17 +104,21 @@
 	</array>
 	<key>GUI</key>
 	<dict>
-		<key>#ScreenResolution</key>
-		<string>1366x768</string>
 		<key>Custom</key>
 		<dict>
 			<key>Entries</key>
 			<array>
 				<dict>
+					<key>Disabled</key>
+					<false/>
 					<key>FullTitle</key>
 					<string>UEFI internal</string>
 					<key>Hidden</key>
 					<string>Always</string>
+					<key>Ignore</key>
+					<false/>
+					<key>NoCaches</key>
+					<false/>
 					<key>Type</key>
 					<string>Other</string>
 				</dict>
@@ -199,6 +135,8 @@
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
+		<key>Scan</key>
+		<true/>
 		<key>Theme</key>
 		<string>Bluemac</string>
 	</dict>
@@ -213,6 +151,8 @@
 			<key>NVidia</key>
 			<true/>
 		</dict>
+		<key>NvidiaSingle</key>
+		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -220,10 +160,18 @@
 		<true/>
 		<key>AsusAICPUPM</key>
 		<true/>
+		<key>Debug</key>
+		<false/>
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
+		<key>KernelCpu</key>
+		<false/>
+		<key>KernelHaswellE</key>
+		<false/>
+		<key>KernelLapic</key>
+		<false/>
 		<key>KernelPm</key>
 		<true/>
 		<key>KextsToPatch</key>
@@ -264,13 +212,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/04/2012</string>
+		<string>09/03/2013</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM131.88Z.010A.B05.1209042338</string>
+		<string>IM142.88Z.0118.B00.1309031249</string>
 		<key>Board-ID</key>
-		<string>Mac-00BE6ED71E35EB86</string>
+		<string>Mac-27ADBB7B4CEE8E61</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
@@ -288,7 +236,9 @@
 		<key>Mobile</key>
 		<false/>
 		<key>ProductName</key>
-		<string>iMac13,1</string>
+		<string>iMac14,2</string>
+		<key>SerialNumber</key>
+		<string>clover</string>
 		<key>Trust</key>
 		<false/>
 		<key>Version</key>

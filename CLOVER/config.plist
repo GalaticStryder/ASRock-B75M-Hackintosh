@@ -182,11 +182,15 @@
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
-				<data>QYjE6xE=</data>
+				<data>
+				QYjE6xE=
+				</data>
 				<key>Name</key>
 				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
-				<data>QYjE6zE=</data>
+				<data>
+				QYjE6zE=
+				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -194,11 +198,15 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>AQAAdRc=</data>
+				<data>
+				AQAAdRc=
+				</data>
 				<key>Name</key>
 				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
-				<data>AQAA6xc=</data>
+				<data>
+				AQAA6xc=
+				</data>
 			</dict>
 		</array>
 	</dict>
@@ -208,6 +216,10 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
+		<key>MLB</key>
+		<string>simplemlbgenscript</string>
+		<key>ROM</key>
+		<string>last12digitsofuuidgen</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -221,6 +233,8 @@
 		<string>Mac-27ADBB7B4CEE8E61</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>serialnumber+5randomcodes</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>ChassisAssetTag</key>
@@ -233,14 +247,14 @@
 		<string>iMac</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<false/>
 		<key>ProductName</key>
 		<string>iMac14,2</string>
 		<key>SerialNumber</key>
-		<string>clover</string>
+		<string>cloverserialnumbergen</string>
+		<key>SmUUID</key>
+		<string>uuidgenonterminal</string>
 		<key>Trust</key>
-		<false/>
+		<true/>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

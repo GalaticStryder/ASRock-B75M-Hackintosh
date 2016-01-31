@@ -7258,6 +7258,19 @@ DefinitionBlock ("DSDT.aml", "DSDT", 2, "ALASKA", "A M I", 0x00000022)
             {
                 Return (GPRW (0x0D, 0x04))
             }
+            Method (_DSM, 4, NotSerialized)
+            {
+                If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }
+                Return (Package()
+                {
+                    "AAPL,slot-name", Buffer() { "Built in" },
+                    "layout-id", Buffer() { 0x05, 0x00, 0x00, 0x00 },
+                    "device_type", Buffer() { "Audio Controller" },
+                    "built-in", Buffer() { 0x00 },
+                    "PinConfigurations", Buffer() { },
+                    "hda-gfx", Buffer() { "onboard-1" }
+                })
+            }
         }
 
         Device (SAT0)
